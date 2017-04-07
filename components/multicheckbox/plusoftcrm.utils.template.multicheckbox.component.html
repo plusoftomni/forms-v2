@@ -1,0 +1,40 @@
+<style>
+  .multicheckbox-group label
+  {
+    display: inline-block;
+    vertical-align: 10px;
+    min-width: 76px;
+  }
+
+  .multicheckbox-group input[type=checkbox]
+  {
+    display: inline-block;
+    margin-right: 2px;
+    width: 15px;
+  }
+</style>
+
+<div class="form-group form-group-sm">
+  <label class="col-xs-12 col-sm-3 control-label">{{translate this.meta.multicheckboxDetail.label}}</label>
+
+  <!-- multicheckbox-group -->
+  <div class="col-xs-12 col-sm-3 col-lg-4 multicheckbox-group">
+    
+    {{#each this.meta.multicheckboxDetail.fields as |chk|}}
+      
+      <input type="checkbox"
+        name="{{chk.bind}}"
+        id="{{chk.bind}}"     
+        class="form-control"
+        ng-model="{{model}}.entity.data.{{chk.bind}}"
+        {{#if chk.checked}} ng-true-value="'{{chk.checked}}'" {{/if}}
+        {{#if chk.unchecked}} ng-false-value="'{{chk.unchecked}}'"{{/if}}>
+
+      <label for="{{chk.bind}}">{{ translate chk.label }}</label>
+
+    {{/each}}
+
+  </div>
+  <!-- /multicheckbox-group -->
+
+</div>

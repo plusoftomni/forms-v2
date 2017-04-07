@@ -1,0 +1,42 @@
+{
+  "label" : "",
+  "name" : "",
+  "template": "plusoftcrm.utils.template.multicheckbox.component",
+  "meta" : {
+    "type": "string",
+    "bind": "donotcontactbyphone",
+    "multicheckboxDetail": {
+      "label": "label.crm_person.donotcontact",
+      "fields": [
+        {
+          "label": "label.crm_person.do_donocontactbyphone",
+          "bind": "donotcontactbyphone",
+          "checked": "Y",
+          "unchecked": "N"
+        },
+        {
+          "label": "label.crm_person.do_donocontactbyaddress",
+          "bind": "donotcontactbyaddress",
+          "checked": "Y",
+          "unchecked": "N"
+        },
+        {
+          "label": "label.crm_person.do_donocontactbymail",
+          "bind": "donotcontactbyemail",
+          "checked": "Y",
+          "unchecked": "N"
+        },
+        {
+          "label": "label.crm_person.do_donocontactbysms",
+          "bind": "donotcontactbysms",
+          "checked": "Y",
+          "unchecked": "N"
+        }
+      ]
+    }
+  },
+  "views" : {
+    "list": {},
+    "edit": {}
+  }
+}
